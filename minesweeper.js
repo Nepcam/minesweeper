@@ -45,23 +45,32 @@ function checkForWin () {
   }
   lib.displayMessage('You win!');
   playSound('sound-win');
+};
 
+  // playSound('sound-win'); 
   // You can use this function call to declare a winner (once you've
   // detected that they've won, that is!)
   //   lib.displayMessage('You win!')
-}
+
+function checkForLost () {
+  for (var i = 0; i <board.cells.length; i++) {
+      if (board.cells[i].isMine && !board.cells[i].hidden) {
+        playSound('sound-lost');
+      }
+    }
+};
 
 
 
 function restartGame(){
   function clearBoard(){
-    for (var i = 0; i < board.cells.length; i++){
+    for (var i = 0; i<board.cells.length; i++){
       document.getElementsByClassName('board')[0].innerHTML = '';
     }
   };
   clearBoard();
   startGame();
-  stopSound('sound-win');
+
 };
 
 // Define this function to count the number of mines around the cell
