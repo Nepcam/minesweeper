@@ -67,8 +67,8 @@ function checkForWin () {
   }
   //console.log(mines);
   if(mines === 0 || cleanCell === 0){
-    lib.displayMessage('You win!');
-    var winningSound = new makeSound("sounds/Ta Da-SoundBible.com-1884170640.mp3");
+    lib.displayMessage('You da Mantis!');
+    var winningSound = new makeSound("sounds/Kids-Cheering.mp3");
     winningSound.play();
     removeListeners();
   }
