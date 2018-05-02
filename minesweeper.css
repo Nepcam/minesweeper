@@ -8,6 +8,11 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
+  height: 100%;
+  background-image: url("images/sunset.jpg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #message, #notes {
@@ -17,7 +22,8 @@ body {
 }
 
 #message {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 .board {
@@ -44,11 +50,11 @@ body {
 }
 
 div.mine, div.mine:hover {
-  background: no-repeat center/60% url("images/bomb.svg") crimson;
+  background: no-repeat center/100% url("images/laughing-tongueOut-face.jpg");
 }
 
 div.hidden {
-  background: #eee;
+  background: rgb(133, 124, 124);
 }
 
 div.hidden:hover {
